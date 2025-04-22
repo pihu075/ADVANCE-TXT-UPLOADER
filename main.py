@@ -52,85 +52,19 @@ async def show_random_emojis(message):
     return emoji_message
     
 # Define the owner's user ID
-OWNER_ID = 574224129 # Replace with the actual owner's user ID
+OWNER_ID = 5840594311 # Replace with the actual owner's user ID
 
 # List of sudo users (initially empty or pre-populated)
-SUDO_USERS = [574224129]
+SUDO_USERS = [5840594311,7856557198,6303334633]
 
-AUTH_CHANNEL = -1002315097727
+AUTH_CHANNEL = -1002572301679
 
 # Function to check if a user is authorized
 def is_authorized(user_id: int) -> bool:
     return user_id == OWNER_ID or user_id in SUDO_USERS or user_id == AUTH_CHANNEL
 
 bot = Client(
-    "bot",# Don't Remove Credit Tg - @Tushar0125
-# Ask Doubt on telegram @Tushar0125
-
-import os
-import re
-import sys
-import json
-import time
-import aiohttp
-import asyncio
-import requests
-import subprocess
-import urllib.parse
-import cloudscraper
-import datetime
-import random
-import ffmpeg
-import logging 
-import yt_dlp
-from aiohttp import web
-from core import *
-from urllib.parse import urlparse, parse_qs
-from bs4 import BeautifulSoup
-from yt_dlp import YoutubeDL
-import yt_dlp as youtube_dl
-import cloudscraper
-import m3u8
-import core as helper
-from utils import progress_bar
-from vars import API_ID, API_HASH, BOT_TOKEN
-from aiohttp import ClientSession
-from pyromod import listen
-from subprocess import getstatusoutput
-from pytube import YouTube
-
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from pyrogram.errors import FloodWait
-from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
-from pyrogram.types.messages_and_media import message
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-cookies_file_path = os.getenv("COOKIES_FILE_PATH", "youtube_cookies.txt")
-
-#pwimg = "https://graph.org/file/8add8d382169e326f67e0-3bf38f92e52955e977.jpg"
-#ytimg = "https://graph.org/file/3aa806c302ceec62e6264-60ced740281395f68f.jpg"
-cpimg = "https://graph.org/file/5ed50675df0faf833efef-e102210eb72c1d5a17.jpg"  
-
-
-async def show_random_emojis(message):
-    emojis = ['🎊', '🔮', '😎', '⚡️', '🚀', '✨', '💥', '🎉', '🥂', '🍾', '🦠', '🤖', '❤️‍🔥', '🕊️', '💃', '🥳','🐅','🦁']
-    emoji_message = await message.reply_text(' '.join(random.choices(emojis, k=1)))
-    return emoji_message
-    
-# Define the owner's user ID
-OWNER_ID = 574224129 # Replace with the actual owner's user ID
-
-# List of sudo users (initially empty or pre-populated)
-SUDO_USERS = [574224129]
-
-AUTH_CHANNEL = -1002315097727
-
-# Function to check if a user is authorized
-def is_authorized(user_id: int) -> bool:
-    return user_id == OWNER_ID or user_id in SUDO_USERS or user_id == AUTH_CHANNEL
-
-bot = Client(
-
+    "bot",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN)
